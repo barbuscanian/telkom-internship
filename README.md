@@ -13,7 +13,7 @@ Dalam proses fine-tuning, yang paling penting untuk disiapkan adalah dataset yan
 ## 1. Fine-Tuning Chatbot Marv dengan Dataset JSONL
 ![alt text](https://github.com/barbuscanian/telkom-internship/blob/main/img/(1).png?raw=true) 
 
-Bertujuan untuk melakukan fine-tuning pada chatbot Marv, yang dirancang untuk memberikan jawaban faktual dengan sentuhan sarkastik. Dataset yang digunakan berbentuk file JSONL, berisi dialog antara pengguna dan chatbot. Setiap entri mencakup peran pengguna dan respon chatbot, yang mencerminkan gaya sarkasme sambil tetap memberikan informasi akurat. Proses fine-tuning dilakukan melalui dashboard OpenAI, di mana file JSONL diunggah dan diproses untuk meningkatkan kemampuan chatbot dalam memberikan jawaban yang relevan dan menarik.
+Bertujuan untuk melakukan fine-tuning pada chatbot Marv, yang dirancang untuk memberikan jawaban faktual dengan sentuhan sarkastik. Dataset yang digunakan berbentuk file JSONL, berisi dialog antara pengguna dan chatbot. Setiap entri mencakup peran pengguna dan respon chatbot, yang mencerminkan gaya sarkasme sambil tetap memberikan informasi akurat. Proses fine-tuning dilakukan melalui dashboard OpenAI, di mana file JSONL diunggah dan diproses untuk meningkatkan kemampuan chatbot dalam memberikan jawaban yang relevan dan menarik. [Hasil disini](https://github.com/barbuscanian/telkom-internship/blob/main/Fine-Tuning%20Chatbot%20Marv%20dengan%20Dataset%20JSONL/Fine%20Tuning%20Chatbot%20dengan%20Dataset%20JSONL.pdf)
 
 ## 2. Fine-Tuning Model GPT pada Dataset Bank Support Train
 ![alt text](https://github.com/barbuscanian/telkom-internship/blob/main/img/(2).png?raw=true) 
@@ -23,7 +23,7 @@ Bertujuan untuk melakukan fine-tuning dataset yang berisi query dan keluhan pela
 * Pemisahan Data untuk Pelatihan dan Validasi: Dataset dibagi menggunakan metode train_test_split dengan stratifikasi berdasarkan 'Kategori Utama'. Ini memastikan distribusi kategori yang seimbang dalam dataset pelatihan dan validasi.
 * Penulisan Data ke Format JSONL: Data yang telah dikonversi disimpan dalam format JSONL, yang cocok untuk fine-tuning GPT-3.5 dengan OpenAI.
 * Pengaturan Fine-Tuning: Setelah mengunggah file pelatihan dan validasi ke OpenAI, proses fine-tuning dimulai pada model gpt-3.5-turbo.
-* Monitoring Pekerjaan: Proses pemantauan pekerjaan fine-tuning dilakukan dengan mencantumkan pekerjaan yang sedang berlangsung, memeriksa status, serta hyperparameter (misalnya, jumlah epoch, ukuran batch, dll.).
+* Pengolahan Hasil Prediksi: Hasil dari model disimpan dalam format DataFrame, yang kemudian diekspor menjadi file CSV. File ini berisi input yang diberikan, instruksi sistem, dan output yang dihasilkan oleh model, memudahkan analisis lebih lanjut. [Hasil disini](https://github.com/barbuscanian/telkom-internship/blob/main/Fine-Tuning%20GPT-3.5%20pada%20Bank%20Support%20Train%20Dataset/predictions.csv)
 
 Hasil dari proyek ini diharapkan dapat meningkatkan akurasi dan relevansi respons model dalam menjawab query dan keluhan pelanggan, serta memberikan wawasan yang lebih baik tentang kategori yang sering dibahas oleh pelanggan.
 
@@ -36,8 +36,8 @@ Bertujuan untuk melakukan fine-tuning model GPT-3.5 pada dataset yang berisi dat
 *	Fine-Tuning Model: Fine-tuning dimulai dengan menggunakan file yang diunggah. Proses ini melibatkan penyesuaian model GPT-3.5 untuk mempelajari pola dari data sensor yang ada, sehingga model dapat memberikan rekomendasi yang lebih akurat berdasarkan input yang diberikan.
 *	Monitoring Proses Fine-Tuning: Status dari berbagai pekerjaan fine-tuning dimonitor untuk memastikan bahwa proses berjalan dengan baik. Setiap job yang berhasil dicatat untuk digunakan lebih lanjut.
 *	Penggunaan Model yang Sudah Di-fine-Tune: Setelah proses fine-tuning selesai, model yang telah dioptimalkan digunakan untuk melakukan prediksi pada data testing. Pengguna dapat mengirimkan input dalam bentuk data sensor, dan model akan memberikan rekomendasi profesional dalam bentuk teks.
-*	Pengolahan Hasil Prediksi: Hasil dari model disimpan dalam format DataFrame, yang kemudian diekspor menjadi file CSV. File ini berisi input yang diberikan, instruksi sistem, dan output yang dihasilkan oleh model, memudahkan analisis lebih lanjut.
-
+*	Pengolahan Hasil Prediksi: Hasil dari model disimpan dalam format DataFrame, yang kemudian diekspor menjadi file CSV. File ini berisi input yang diberikan, instruksi sistem, dan output yang dihasilkan oleh model, memudahkan analisis lebih lanjut. [Hasil disini](https://github.com/barbuscanian/telkom-internship/blob/main/Fine-Tuning%20GPT-3.5%20pada%20Rekomendasi%20Aksi%20Sensor%20Dataset/model_predictions.csv)
+ 	
 Hasil dari proyek ini diharapkan dapat meningkatkan pengambilan keputusan berbasis data dengan memberikan rekomendasi dan bermanfaat berdasarkan pola yang terdeteksi dalam data sensor.
 
 ### Perbedaan Sebelum dan Setelah Fine Tuning
